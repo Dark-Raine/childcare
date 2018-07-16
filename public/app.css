@@ -1,0 +1,617 @@
+/*global*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Pacifico');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+#home-text{
+    font-family: 'Pacifico', cursive;
+
+}
+
+
+body, button{
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: #fff;
+}
+
+
+ul{
+    list-style: none;
+}
+
+section h1, p{
+    align-self: center;
+    color: #000;
+}
+
+p{
+    max-width: 800px;
+}
+
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+/* animations */
+
+@keyframes fadein{
+	100%{
+		opacity: 1;
+	}
+}
+
+@keyframes slidefade{
+	100%{
+		opacity: 1;
+		margin-top: -30vh;
+	}
+}
+
+@keyframes popout{
+    
+}
+/*-------------------------------------------------nav------------------------------------------------------------*/
+
+header{
+    position: fixed;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.781);
+    width: 100%;
+    z-index: 10;
+    top: 0;
+    justify-content: space-between;
+    padding: 0px 300px 0px 300px;
+    align-self: center;
+    opacity: 0;
+    animation: 2s fadein 0.5s forwards;
+}
+
+
+
+header div{
+    display: flex;
+
+}
+
+nav{
+    display: flex;
+    align-self: center;
+}
+
+.nav.items{
+    display: flex;
+}
+
+
+
+header li a{
+    margin-right: 10px;
+    font-weight: 700;
+    opacity: 0.781;
+    transition: color 0.25s;
+}
+
+header li a:hover{
+    color: #d9b65d;
+}
+
+@media (max-width: 800px){
+	header{
+		
+        flex-direction: column;
+        padding: 0;
+	}
+	header div{
+        flex-direction: column;
+        align-items: center;
+    }
+    header ul{
+        align-self: center;
+    }
+    header h2{
+        text-align: center;
+    }
+}
+
+
+/* -----------------------------------------------------hero------------------------------------------------------------------------------------*/
+
+#hero{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 1000px;
+    box-shadow: 0px 0px 25px #000;
+    width: 100%;
+    background-image: url("hero_bgt5.jpg");
+    background-size: cover;
+    top: 0;
+    z-index: 1;
+    
+
+
+}
+
+
+
+
+
+#hero #container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    opacity: 0;
+    animation: 1s slidefade 1s forwards;
+    
+    
+}
+
+#hero #container h1{
+    align-self: center;
+    font-size: 48px;
+    font-weight: 700;
+    text-shadow: 0px 0px 25px #000;
+    color: #fff;
+    
+    
+}
+
+#hero-btn{
+    width: fit-content;
+    align-self: center;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 3px;
+    font-weight: 700;
+    font-size: 18px;
+    background-color: #DA9E06;
+    box-shadow: 0px 0px 25px #000;
+    margin-top: 50px;
+    transition: background-color 0.5s;
+    outline: none;
+
+}
+
+#hero-btn:hover{
+    background-color: #d9b65d;
+}
+
+@media (max-width:800px){
+    #hero #container h1{
+        text-align: center;
+    }
+}
+/* --------------------about me-------------------- */
+
+#about-me{
+    
+    height: 500px;
+    background-image: url("about_bg.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    z-index: -5;
+}
+
+#profile-header{
+    margin-top: -300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+   
+}
+#img-holder div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+#header-pic{
+    border-radius: 100%;
+    width: 400px;
+    height: 400px;
+    box-shadow: 0px 0px 25px #000;
+    border: 5px;
+    border-color: #d9b65d;
+    border-style: solid;
+    align-self: center;
+}
+
+#profile-header h2{
+    margin-top: -20px;
+    margin-bottom: 20px;
+    font-family: 'Pacifico', cursive;
+    font-size: 38px;
+    align-self: center;
+    padding-top: 50px;
+}
+
+#about-me-descrip{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: 0px 0px 25px #000;
+
+    
+}
+hr{
+    align-self: center;
+    height: 5px;
+    width: 100%;
+    max-width:800px ;
+    background-color: #822407;
+    border: none;
+    border-radius: 2px;
+    margin-bottom: 10px;
+    
+    
+}
+
+#about-me-descrip h1{
+    align-self: center;
+    color: #000;
+    font-size: 28px;
+}
+
+#about-me-descrip p{
+    display: flex;
+    align-self: center;
+    color: #000;
+    margin-top: 50px;
+    
+    font-size: 20px;
+}
+
+@media screen and (max-width: 800px){
+    #header-pic{
+        width: 200px;
+        height: 200px;
+        
+    }
+    #profile-header{
+        margin-top: -150px;
+    }
+}
+
+/* -------------------------divider------------------------------- */
+
+#Min-Show{
+    height: 500px;
+    background-image: url("about_bg.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    
+    width: 100%;
+    
+    
+}
+
+/* -------------------------setting------------------------------- */
+
+#Setting{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0px 0px 25px #000;
+
+}
+
+#setting p{
+    display: flex;
+    align-self: center;
+    color: #000;
+    margin-top: 50px;
+    padding-bottom: 25px;
+    font-size: 20px;
+}
+
+#Setting-anchor{
+    margin-top: -50px;
+    padding-top: 50px;
+}
+
+@media (max-width:800px)
+{
+    #Setting-anchor{
+        margin-top: -60px;
+        padding-top: 60px;
+    }
+
+}
+
+/* ---------------------------Setting image slider--------------------------- */
+
+
+
+#slider,
+.wrap,
+.slide-content {
+  display: flex;
+  align-self: center;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 800px;
+  height: 400px;
+  overflow-x: hidden;
+  
+}
+
+
+.wrap {
+  position: relative;
+  background-color: grey;
+  margin-bottom: 10px;
+
+}
+
+.slide {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slide1 {
+  background-image: url("slideImg/slide1.jpeg");
+}
+.slide2 {
+  background-image: url("slideImg/slide2.jpeg");
+}
+.slide3 {
+  background-image: url("slideImg/slide3.jpeg");
+}
+.slide4 {
+    background-image: url("slideImg/slide4.jpeg");
+}
+.slide5 {
+    background-image: url("slideImg/slide5.jpeg");
+}
+.slide6 {
+    background-image: url("slideImg/slide6.jpeg");
+}
+.slide7 {
+    background-image: url("slideImg/slide7.jpeg");
+}
+.slide8 {
+    background-image: url("slideImg/slide8.jpeg");
+  }
+
+.slide-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.slide-content span {
+  font-size: 5rem;
+  color: #fff;
+  visibility: hidden;
+}
+
+.arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin-top: -35px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+#arrow-left {
+  border-width: 30px 40px 30px 0;
+  border-color: transparent #fff transparent transparent;
+  left: 0;
+  margin-left: 30px;
+}
+
+#arrow-right {
+  border-width: 30px 0 30px 40px;
+  border-color: transparent transparent transparent #fff;
+  right: 0;
+  margin-right: 30px;
+}
+
+@media(max-width:800px){
+    #slider,
+    .wrap,
+    .slide-content{
+        width: 100%;
+    }
+}
+/* ------------------prices-------------------*/
+
+.prices{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 0 150px 100px 150px;
+    box-shadow: 0px 0px 25px #000;
+    
+}
+ul{
+    list-style: none;
+    text-align: center;
+  }
+  
+  .col{
+    width: 33.3%;
+    padding: 8px;
+    box-sizing: border-box;
+    align-self: center;
+  }
+  
+  .price-box{
+    background:#fff;
+    color:#555;
+    border:1px solid #555;
+    border-radius:5px;
+    margin:0;
+    padding:0;
+    transition: 0.3s;
+  }
+  
+  .price-box:hover{
+    box-shadow: 0 10px 15px 0 #000;
+  }
+  
+  .price-box .header{
+    background-color:#111;
+    color:#fff;
+    font-size:25px;
+  }
+  
+  .price-box li{
+    padding:20px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .emph{
+    background-color:#f4f4f4;
+    font-size:20px;
+  }
+  
+  .button{
+    background-color:#4caf50;
+    border:none;
+    color:#fff;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  #pricings{
+    margin-top: -50px;
+    padding-top: 50px;
+}
+
+.prices p{
+    text-align: center;
+    font-size: 18px;
+}
+
+
+  
+  @media(max-width:800px){
+    .col{
+      width:100vw;
+    }
+
+    #pricings{
+        margin-top: -60px;
+        padding-top: 60px;
+    }
+  }
+
+/* ------------------contact------------------*/
+
+#contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 25px #000;
+    background-color: #DA9E06;
+    padding-bottom: 15px;
+}
+
+form p{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 24px;
+
+}
+
+form p input{
+	margin-bottom: 24px;
+	font-size: 18px;
+	color: #555;
+	width: 100%;
+	border-radius: 5px;
+	border:0;
+	outline: none;
+    padding: 10px 20px;
+    
+    
+}
+
+textarea{
+	margin-bottom: 24px;
+	font-size: 18px;
+	color: #555;
+	width: 100%;
+	border-radius: 5px;
+	border:0;
+	outline: none;
+    padding: 10px 20px;
+    resize: none;
+    height: 200px;
+}
+
+
+form button{
+    align-self: flex-start;
+	margin-top: 25px;
+	font-size: 18px;
+	text-transform: uppercase;
+	color: #fff;
+	outline: none;
+	border-width: 1px;
+	border-radius: 5px;
+	border-color: #fff;
+	padding: 10px 20px;
+	background-color: transparent;
+	transition: color 0.25s, background-color 0.25s;
+}
+
+form button:hover{
+	
+	/*animation: 0.25s fade 0s both;*/
+	color: #000;
+	background-color: #fff;
+}
+
+
+form button:active{
+	box-shadow: 0px 0px 30px #000;
+}
+
+#btnSnd{
+    margin-left: 100px;
+}
+
+/* footer */
+
+footer{
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    background-color: #111;
+}
+
+footer p{
+    color: #fff;
+    font-weight: bold;
+}
+
+ .error{
+    border-color: red;
+    border-width: 3px;
+}
